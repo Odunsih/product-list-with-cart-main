@@ -1,0 +1,157 @@
+body {
+  font-family: "redhatVariable";
+}
+
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: antiquewhite;
+  width: 75%;
+}
+
+main {
+  width: 60%;
+}
+
+.addToCart {
+  width: 60%;
+  height: 20px;
+  margin-left: 30px;
+  margin-right: 30px;
+  position: relative;
+  bottom: 15px;
+}
+
+.dishMenu {
+  display: grid;
+  grid-template-areas: auto auto auto;
+  gap: 10px;
+}
+
+.dishes {
+  margin: 0;
+  padding: 0;
+}
+
+.dishes img {
+  width: 100%;
+  height: 150px;
+}
+
+#dish1 {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#dish2 {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+#dish3 {
+  grid-column: 3;
+  grid-row: 1;
+}
+
+#dish4 {
+  grid-column: 1;
+  grid-row: 2;
+}
+
+#dish5 {
+  grid-column: 2;
+  grid-row: 2;
+}
+
+#dish6 {
+  grid-column: 3;
+  grid-row: 2;
+}
+
+#dish7 {
+  grid-column: 1;
+  grid-row: 3;
+}
+
+#dish8 {
+  grid-column: 2;
+  grid-row: 3;
+}
+
+#dish9 {
+  grid-column: 3;
+  grid-row: 3;
+}
+
+menu {
+  background-color: hsl(20, 50%, 98%);
+  width: 30%;
+  margin: 20px;
+  border-radius: 20px;
+  padding: 15px;
+}
+
+menu h1 {
+  color: hsl(14, 86%, 42%);
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.cart {
+  display: flex;
+  justify-content: space-between;
+}
+
+hr {
+  border-color: hsl(20, 50%, 98%);
+}
+
+.cart img {
+  border: 1px solid hsl(14, 25%, 72%);
+  border-radius: 50%;
+  height: 15px;
+  margin-top: 30px;
+  cursor: pointer;
+}
+
+.bill span {
+  color: hsl(14, 86%, 42%);
+}
+
+.bill {
+  color: hsl(14, 25%, 72%);
+}
+
+.total {
+  display: flex;
+  justify-content: space-between;
+}
+
+.total h1 {
+  color: #000;
+  font-weight: 700;
+}
+
+.confirmBtn {
+  width: 90%;
+  margin: 0 10px;
+  padding: 7px 0;
+  font-size: 15px;
+  color: hsl(20, 50%, 98%);
+  background-color: hsl(14, 86%, 42%);
+  border: none;
+  border-radius: 100px;
+  cursor: pointer;
+}
+
+@font-face {
+  /* font-family: 'redhatItalic';
+    src: url(./assets/fonts/RedHatText-Italic-VariableFont_wght.ttf); */
+  font-family: "redhatVariable";
+  src: url("./assets/fonts/RedHatText-VariableFont_wght.ttf");
+  /* font-family: 'redhatItalic';
+    src: url(./assets/fonts/RedHatText-VariableFont_wght.ttf); */
+}
