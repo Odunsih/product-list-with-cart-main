@@ -111,32 +111,40 @@ btn9.addEventListener("click", () => {
   btn("btn9");
 });
 
-let cartQuantity = 1;
+// Object to store cart quantities for each item
+let cartQuantities = {
+  add1: 0,
+  add2: 0,
+  add3: 0,
+  add4: 0,
+  add5: 0,
+  add6: 0,
+  add7: 0,
+  add8: 0,
+  add9: 0,
+};
 
 function increase(param) {
-  if (param === "add1") {
-    cartQuant1.innerHTML = cartQuantity++;
-  } else if (param === "add2") {
-    cartQuant2.innerHTML = cartQuantity++;
-  } else if (param === "add3") {
-    cartQuant3.innerHTML = cartQuantity++;
-  } else if (param === "add4") {
-    cartQuant4.innerHTML = cartQuantity++;
-  } else if (param === "add5") {
-    cartQuant5.innerHTML = cartQuantity++;
-  } else if (param === "add6") {
-    cartQuant6.innerHTML = cartQuantity++;
-  } else if (param === "add7") {
-    cartQuant7.innerHTML = cartQuantity++;
-  } else if (param === "add8") {
-    cartQuant8.innerHTML = cartQuantity++;
-  } else if (param === "add9") {
-    cartQuant9.innerHTML = cartQuantity++;
+  if (cartQuantities.hasOwnProperty(param)) {
+    cartQuantities[param]++;
+    let cart = document.getElementById(param);
+    cart.innerHTML = cartQuantities[param];
+  } else {
+    console.error("Invalid parameter: ", param);
   }
 }
 
-function decrease() {
-  cartQuant.innerHTML = cartQuantity--;
+function decrease(param) {
+  if (cartQuantities.hasOwnProperty(param)) {
+    // Ensure quantity doesn't go below 0
+    if (cartQuantities[param] > 0) {
+      cartQuantities[param]--;
+    } else if (cartQuantities[param] === 0) {
+    }
+    updateQuantityDisplay(param);
+  } else {
+    console.error("Invalid parameter: ", param);
+  }
 }
 
 const add1 = () => {
@@ -146,13 +154,13 @@ const add1 = () => {
 
 const sub1 = () => {
   console.log("click");
-  if (cartQuantity === 0) {
+  if (cartQuantities === 0) {
     btn1.classList.add("addToCart");
     counter1.classList.remove("counterVis");
     counter1.classList.add("counter");
     btn1.classList.remove("addToCartInv");
-  } else if (cartQuantity > 0) {
-    decrease();
+  } else if (cartQuantities > 0) {
+    decrease("add1");
   }
 };
 
@@ -175,7 +183,7 @@ const sub2 = () => {
 
 const add3 = () => {
   console.log("click");
-  increase();
+  increase("add3");
 };
 
 const sub3 = () => {
@@ -192,7 +200,7 @@ const sub3 = () => {
 
 const add4 = () => {
   console.log("click");
-  increase();
+  increase("add4");
 };
 
 const sub4 = () => {
@@ -209,7 +217,7 @@ const sub4 = () => {
 
 const add5 = () => {
   console.log("click");
-  increase();
+  increase("add5");
 };
 
 const sub5 = () => {
@@ -226,7 +234,7 @@ const sub5 = () => {
 
 const add6 = () => {
   console.log("click");
-  increase();
+  increase("add6");
 };
 
 const sub6 = () => {
@@ -243,7 +251,7 @@ const sub6 = () => {
 
 const add7 = () => {
   console.log("click");
-  increase();
+  increase("add7");
 };
 
 const sub7 = () => {
@@ -260,7 +268,7 @@ const sub7 = () => {
 
 const add8 = () => {
   console.log("click");
-  increase();
+  increase("add8");
 };
 
 const sub8 = () => {
@@ -277,7 +285,7 @@ const sub8 = () => {
 
 const add9 = () => {
   console.log("click");
-  increase();
+  increase("add9");
 };
 
 const sub9 = () => {
