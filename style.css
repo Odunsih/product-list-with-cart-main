@@ -1,15 +1,18 @@
 body {
   font-family: "redhatVariable";
+  padding: auto;
 }
 
 section {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 auto;
+  margin: 100px auto;
   padding: 20px;
-  background-color: antiquewhite;
+  background-color: hsl(13, 31%, 94%);
   width: 75%;
+  box-shadow: 1px 10px 10px #00000073;
+  border-radius: 5px;
 }
 
 main {
@@ -17,12 +20,23 @@ main {
 }
 
 .addToCart {
-  width: 60%;
-  height: 20px;
-  margin-left: 30px;
-  margin-right: 30px;
+  width: 80%;
+  /* height: 20pxs; */
+  margin: 0 15px;
   position: relative;
-  bottom: 15px;
+  bottom: 20px;
+  font-size: 15px;
+  font-weight: 600;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 50px;
+  border-color: hsl(20, 50%, 98%);
+  cursor: pointer;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
 }
 
 .dishMenu {
