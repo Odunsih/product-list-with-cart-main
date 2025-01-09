@@ -10,7 +10,7 @@ section {
   margin: 100px auto;
   padding: 20px;
   background-color: hsl(13, 31%, 94%);
-  width: 75%;
+  width: 80%;
   box-shadow: 1px 10px 10px #00000073;
   border-radius: 5px;
 }
@@ -19,24 +19,96 @@ main {
   width: 60%;
 }
 
+.counter {
+  display: none;
+}
+
+.counterVis {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: hsl(14, 86%, 42%);
+  width: 80%;
+  height: 18px;
+  margin: 0 15px;
+  position: relative;
+  bottom: 20px;
+  font-size: 11px;
+  font-weight: 600;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  border-radius: 50px;
+  color: #fff;
+}
+
+.addToCartInv {
+  display: none;
+}
+
 .addToCart {
   width: 80%;
   /* height: 20pxs; */
   margin: 0 15px;
   position: relative;
   bottom: 20px;
-  font-size: 15px;
+  font-size: 11px;
   font-weight: 600;
   padding-top: 5px;
   padding-bottom: 5px;
   border-radius: 50px;
-  border-color: hsl(20, 50%, 98%);
+  border-color: hsl(14, 25%, 72%);
   cursor: pointer;
+}
+
+.addToCart:hover {
+  border-color: hsl(14, 86%, 42%);
+  color: hsl(14, 86%, 42%);
+}
+
+.incre:active,
+.decre:active {
+  background-color: #fff;
+}
+
+.incre path:active,
+.decre path:active {
+  fill: hsl(14, 86%, 42%);
+}
+
+.decre,
+.incre {
+  margin: 20px;
+  cursor: pointer;
+  border: 1px solid #fff;
+  border-radius: 50px;
+  padding: 5px;
+  width: 8px;
+  height: 8px;
 }
 
 .icon {
   width: 20px;
-  height: 20px;
+  height: 13px;
+}
+
+.dishInfo {
+  margin-top: 0;
+}
+
+.dishInfo h3 {
+  font-size: 11px;
+}
+
+.dishInfo p {
+  color: hsl(14, 25%, 72%);
+  margin: -10px 0;
+  font-size: 10px;
+}
+
+.dishPrice {
+  color: hsl(14, 86%, 42%);
+  margin-top: -10px;
+  font-size: 12px;
 }
 
 .dishMenu {
@@ -53,6 +125,7 @@ main {
 .dishes img {
   width: 100%;
   height: 150px;
+  border-radius: 10px;
 }
 
 #dish1 {
@@ -102,7 +175,10 @@ main {
 
 menu {
   background-color: hsl(20, 50%, 98%);
-  width: 30%;
+  width: 20%;
+  margin-top: 0;
+  position: relative;
+  bottom: 18px;
   margin: 20px;
   border-radius: 20px;
   padding: 15px;
@@ -111,12 +187,13 @@ menu {
 menu h1 {
   color: hsl(14, 86%, 42%);
   font-weight: 700;
-  font-size: 20px;
+  font-size: 14px;
 }
 
 .cart {
   display: flex;
   justify-content: space-between;
+  font-size: 7px;
 }
 
 hr {
@@ -149,16 +226,24 @@ hr {
   font-weight: 700;
 }
 
+.total p {
+  font-size: 10px;
+}
+
 .confirmBtn {
   width: 90%;
   margin: 0 10px;
   padding: 7px 0;
-  font-size: 15px;
+  font-size: 10px;
   color: hsl(20, 50%, 98%);
   background-color: hsl(14, 86%, 42%);
   border: none;
   border-radius: 100px;
   cursor: pointer;
+}
+
+.confirmBtn:active {
+  background-color: hsl(14, 98%, 25%);
 }
 
 @font-face {
